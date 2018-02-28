@@ -1,5 +1,8 @@
-import {
-  newPet
-} from '../src/virtual-pet.js';
+const Pet = require('../src/pet');
 
 
+describe('constructor', () => {
+  it('returns an object', () => {
+    expect(new Pet('Fido')).toBeInstanceOf(Object);
+  });
+});
