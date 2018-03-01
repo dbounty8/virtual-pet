@@ -28,7 +28,8 @@ describe('growUp', () => {
 describe('walk', () => {
   it('increments fitness by 4', () => {
     const pet = new Pet('Fido');
+    pet.fitness = 4;
     pet.walk();
-    expect(pet.fitness).toEqual(10);
+    expect(pet.fitness).toEqual(8);
   });
 });
