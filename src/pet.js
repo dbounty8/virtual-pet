@@ -1,8 +1,8 @@
-const AGE_INCREMENT_VALUE = 1;
-const HUNGER_INCREMENT_VALUE = 5;
-const FITNESS_DECREASE_VALUE = 3;
-const FITNESS_INCREMENT_VALUE = 4;
-const MAXIMUM_FITNESS_VALUE = 10;
+const AGE_INCREMENT = 1;
+const HUNGER_INCREMENT = 5;
+const FITNESS_DECREASE = 3;
+const FITNESS_INCREMENT = 4;
+const MAXIMUM_FITNESS = 10;
 
 function Pet(name) {
   this.name = name;
@@ -13,17 +13,17 @@ function Pet(name) {
 
 Pet.prototype.growUp = function() {
   
-  this.age += AGE_INCREMENT_VALUE;
-  this.hunger += HUNGER_INCREMENT_VALUE;
-  this.fitness -= FITNESS_DECREASE_VALUE;
+  this.age += AGE_INCREMENT;
+  this.hunger += HUNGER_INCREMENT;
+  this.fitness -= FITNESS_DECREASE;
 }
 
 Pet.prototype.walk = function() {
   
-  if ((this.fitness + FITNESS_INCREMENT_VALUE) > MAXIMUM_FITNESS_VALUE){
-    this.fitness = MAXIMUM_FITNESS_VALUE;
+  if ((this.fitness + FITNESS_INCREMENT) > MAXIMUM_FITNESS){
+    this.fitness = MAXIMUM_FITNESS;
   } else {
-    this.fitness += FITNESS_INCREMENT_VALUE;
+    this.fitness += FITNESS_INCREMENT;
   }
 }
 
