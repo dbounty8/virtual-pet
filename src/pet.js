@@ -5,6 +5,8 @@ const FITNESS_INCREMENT = 4;
 const MAXIMUM_FITNESS = 10;
 const MINIMUM_HUNGER = 0;
 const FEED_DECREASE = 3;
+const NEED_FOOD = 5;
+const NEED_WALK = 3;
 
 function Pet(name) {
   this.name = name;
@@ -35,6 +37,16 @@ Pet.prototype.feed = function() {
   }
 }
 
+Pet.prototype.checkUp = function() {
+  status = [];
+  if (this.fitness <= NEED_WALK) {
+    status.push('I need a walk');
+  }
+  if (this.hunger <= NEED_FOOD) {
+    status.push('I am hungry');
+  }
+  return status;
+}
 
 
 module.exports = Pet;

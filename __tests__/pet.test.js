@@ -42,3 +42,13 @@ describe('feed', () => {
     expect(pet.hunger).toEqual(3);
   });
 });
+
+describe('checkUp', () => {
+  it('lets us know the pets needs', () => {
+    const pet = new Pet('Fido');
+    pet.fitness = 3;
+    pet.hunger = 5;
+    pet.checkUp();
+    expect(status).toEqual(['I need a walk', 'I am hungry'])
+  })
+})
