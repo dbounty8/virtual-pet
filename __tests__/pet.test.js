@@ -22,5 +22,13 @@ describe('growUp', () => {
     expect(pet.age).toEqual(1);
     expect(pet.hunger).toEqual(5);
     expect(pet.fitness).toEqual(7);
-  })
+  });
+});
+
+describe('walk', () => {
+  it('increments fitness by 4', () => {
+    const pet = new Pet('Fido');
+    pet.walk();
+    expect(pet.fitness).toEqual(10);
+  });
 });
