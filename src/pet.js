@@ -15,6 +15,17 @@ function Pet(name) {
   this.fitness = 10;
 }
 
+Pet.prototype = {
+  get isAlive() {
+    if ((this.age <= 30) || (this.hunger <= 10) || (this.fitness <= 0)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
+
+
 Pet.prototype.growUp = function() {
   this.age += AGE_INCREMENT;
   this.hunger += HUNGER_INCREMENT;

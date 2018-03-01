@@ -50,5 +50,13 @@ describe('checkUp', () => {
     pet.hunger = 5;
     pet.checkUp();
     expect(status).toEqual(['I need a walk', 'I am hungry'])
+  });
+});
+
+describe('isAlive', () => {
+  it('checks if my pet is alive', () => {
+    const pet = new Pet('Fido');
+    pet.fitness = 0;
+    expect(pet.isAlive).toEqual(false);
   })
 })
